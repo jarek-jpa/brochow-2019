@@ -23,6 +23,7 @@
     </script>
 
     <style media="screen" type="text/css">
+        /* this removes uppercasing of all headings */
         .reveal h1 {
             text-transform: none;
         }
@@ -47,6 +48,7 @@
             text-transform: none;
         }
 
+        /* column layout for some slides */
         .container {
             display: flex;
         }
@@ -55,6 +57,7 @@
             flex: 1;
         }
 
+        /* no border for images - doubling class to win specificity */
         .nobox.nobox {
             box-shadow: none;
             border: 0;
@@ -69,7 +72,7 @@
         <section data-markdown>
 	        <textarea data-template>
 		        ## O sklepach internetowych, algorytmach
-                ### i o pracy informatyka
+                ### i pracy informatyka
                 #### jarek.pawlak@zielony-blekit.org
 	        </textarea>
         </section>
@@ -113,30 +116,47 @@
         </section>
 
         <section>
-            <h2>przyklad - <a href="https://www.empik.com/nowosci/ksiazki?searchCategory=313112&hideUnavailable=true&sort=publishDesc&novelties=novelty&qtype=facetForm">lista książek</a></h2>
+            <h2>przykład - <a href="https://www.empik.com/nowosci/ksiazki?searchCategory=313112&hideUnavailable=true&sort=publishDesc&novelties=novelty&qtype=facetForm">lista książek</a></h2>
+            <div class="container" style="padding-bottom: 35px">
+                <div class="col fragment" data-fragment-index="4">dane</div>
+                <div class="col fragment" data-fragment-index="5">+ algorytmy</div>
+                <div class="col fragment" data-fragment-index="6">= programy</div>
+            </div>
             <div class="container">
-                <div class="col fragment">
+                <div class="col fragment" data-fragment-index="1">
                     <pre><code data-trim class="yaml">
                         ksiazka-1:
                           tytul: Wyprawa po serce..
                           autor: Carteron Marine
+
                         ksiazka-2:
                           tytul: Małe licho
                           autor: Kisiel Marta
+
                         ksiazka-3:
                           tytul: Otwórzcie drzwi..
                           autor: Przewoźniak M..
                     </code></pre>
                 </div>
 
-                <div class="col fragment">
-                    <img src="resources/magic-wand.png" width="200" class="nobox" />
+<!--                TODO: center vertically-->
+                <div class="fragment" style="flex: 0.25;" data-fragment-index="2">
+                    <img src="resources/magic-wand.png" class="nobox" />
                 </div>
 
-                <div class="col fragment">
+                <div class="col fragment" data-fragment-index="3">
                     <img src="resources/empik-books-1.png" />
                 </div>
             </div>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                ### _algorytm_ -
+                sposób postępowania prowadzący do rozwiązania problemu <!-- .element style="font-size:smaller" class="fragment"-->
+
+                pr
+            </textarea>
         </section>
 
     </div>
